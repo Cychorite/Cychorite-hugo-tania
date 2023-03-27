@@ -1,0 +1,2 @@
+{{ $override := resources.Get "sass/override-global.scss" | toCSS | minify | fingerprint }}
+<link href="{{ $override.RelPermalink }}" rel="stylesheet"/>

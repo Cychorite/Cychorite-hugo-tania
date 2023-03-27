@@ -1,13 +1,14 @@
 <footer class="footer flex">
     <section class="container">
         <nav class="footer-links">
-            {{ range .Site.Menus.footer }}
+            {{ range sort .Site.Menus.footer "Weight" }}
             <a href="{{ .URL | relURL }}">{{ .Name }}</a>
             {{ end }}
         </nav>
 
         {{ partial "footer/custom" . }}
     </section>
+    <p>由 <a href="https://gohugo.io/" target="_blank">Hugo</a> 和 <a href="https://github.com/WingLim/hugo-tania" target="_blank">hugo-tania</a> 驱动</p>
     {{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
     <script type="text/javascript">
         window.MathJax = {

@@ -1,0 +1,3 @@
+{{- $opts := dict "minify" hugo.IsProduction -}}
+{{ $features := resources.Get "js/open-external-link-in-new-tab.js" | js.Build $opts | fingerprint }}
+<script defer src="{{ $features.RelPermalink }}"></script>

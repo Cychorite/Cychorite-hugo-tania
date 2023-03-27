@@ -1,0 +1,27 @@
+* {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "微软雅黑", "WenQuanYi Micro Hei", "HarmonyOS Sans SC", helvetica, Arial, "sans-serif" !important;
+}
+
+pre * {
+    font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace !important;
+    font-size: 1em;
+}
+
+code {
+    font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace !important;
+    font-size: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-user-color-scheme]) {
+        --heading-color: #b1a0ff;
+        --link-color: #6470ad;
+        --link-color-darker: #454e7e;
+    }
+}
+
+[data-user-color-scheme='dark'] {
+    --heading-color: #b1a0ff;
+    --link-color: #6470ad;
+    --link-color-darker: #454e7e;
+}
